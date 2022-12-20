@@ -5375,7 +5375,7 @@ __webpack_require__.r(__webpack_exports__);
         if (counter == 0) {
           this.form.url = false;
         } else {
-          var CurrentUrl = window.location.href + "url/u/" + resultnewUrl;
+          var CurrentUrl = "http://urlshortner.test/" + "url/u/" + resultnewUrl;
           axios__WEBPACK_IMPORTED_MODULE_0___default().post('url/shorten', {
             url: newUrl,
             shortlink: CurrentUrl
