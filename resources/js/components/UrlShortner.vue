@@ -107,7 +107,7 @@ export default {
                 if (counter == 0) {
                     this.form.url = false;
                 }   else{
-                    let CurrentUrl = "http://urlshortner.test/"+ "url/u/"+resultnewUrl
+                    let CurrentUrl = window.location.href + "url/u/"+resultnewUrl
 
                     axios.post('url/shorten',{
                         url:newUrl,
@@ -122,7 +122,8 @@ export default {
                 }      
         }
         // console.log(resultnewUrl);
-    
+        var rest = document.getElementById('p1').value
+        rest = null;
     },
    
         copyContent() {

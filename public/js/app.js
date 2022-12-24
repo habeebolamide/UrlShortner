@@ -5375,7 +5375,7 @@ __webpack_require__.r(__webpack_exports__);
         if (counter == 0) {
           this.form.url = false;
         } else {
-          var CurrentUrl = "http://urlshortner.test/" + "url/u/" + resultnewUrl;
+          var CurrentUrl = window.location.href + "url/u/" + resultnewUrl;
           axios__WEBPACK_IMPORTED_MODULE_0___default().post('url/shorten', {
             url: newUrl,
             shortlink: CurrentUrl
@@ -5389,6 +5389,8 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
       // console.log(resultnewUrl);
+      var rest = document.getElementById('p1').value;
+      rest = null;
     },
     copyContent: function copyContent() {
       var el = document.createElement('textarea');
