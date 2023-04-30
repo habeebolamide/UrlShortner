@@ -21,6 +21,7 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('url-shortener', require('./components/UrlShortner.vue').default);
+Vue.component('get-urls', require('./components/Urls.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

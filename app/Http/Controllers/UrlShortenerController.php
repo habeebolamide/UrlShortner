@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\UrlShortener;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UrlShortenerController extends Controller
 {
@@ -58,10 +59,23 @@ class UrlShortenerController extends Controller
                 return abort(404);
             }else{
                 // dd($url[0]['old_url']);
+                return  dd($url[0]);
                 return redirect($url[0]['old_url']);
             }
         }catch(Exception $e){
             dd($e);
         }
+    }
+
+    public function getUrl()
+    {
+        // return Auth::user()->id;
+        $url =  UrlShortener::where('user_id', Auth::user()->id)->get();
+        return $url;
+    }
+
+    public function FunctionName()
+    {
+        
     }
 }

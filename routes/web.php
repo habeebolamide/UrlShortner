@@ -26,4 +26,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('url')->name('url.')->group(function(){
     Route::post('/shorten',[UrlShortenerController::class, 'store']);
     Route::get('/u/{any}' , [UrlShortenerController::class, 'handle']);
+    Route::get('/getUrl' , [UrlShortenerController::class, 'getUrl']);
+    Route::get('/page' , function() {
+        return view('urls');
+    });
 });
